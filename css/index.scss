@@ -1,8 +1,4 @@
-$font-stack: 'Barlow', sans-serif;
-$font-size: 18px;
-$font-weight: 400;
-$font-style: normal;
-$font-color: #FFFFFF;
+@import 'variables';
 
 html
 body{
@@ -20,222 +16,162 @@ body{
     box-sizing: border-box;
 }
 
+// Header start
 header{
     width: 100%;
     height: 955px;
     background-image: url('/images/bg-image.png');
     background-repeat: no-repeat;
     background-size: cover;
-}
 
-nav{
-    width: 1148px;
-    height: 54px;
-    padding-top: 32px;
-    margin: 0 auto 198px auto ;
+    nav{
+        width: 100%;
+        height: 54px;
+        padding-top: 32px;
+        padding-right: 146px;
+        margin-bottom: 198px;
+    
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 32px;
+    
+            li{
+                list-style-type: none;
+                padding: 12px 0;
+                font-family: $font-stack;
+                font-size: $font-size;
+                line-height: 30px;
+    
+                a{
+                    text-decoration: none;
+                    color: $primary-font-color;
 
-    ul{
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 32px;
+                    &:hover{
+                        border-bottom: 2px solid ;
+                    }
+                }    
+    
+            }
+            li:nth-child(7){
+                font-size: 16px;
+                line-height: 18px;
+                padding: 17px 24px 19px 24px;
+                background: #FF4D01;
+            }
+        }
+    }
 
-        li{
-            list-style-type: none;
-            padding: 12px 0;
-            font-family: $font-stack;
-            font-size: $font-size;
+    div.home-container{
+        width: 100%;
+        height: 359px;
+        margin: 165px auto 344px auto;
+        text-align: center;
+        color: $primary-font-color;
+        
+        p:nth-child(1){
+            width: 660px;
+            height: 169px;
+            margin: 0 auto 20px auto;
+            font-size: 72px;
+            line-height: 84px;
+        }
+    
+        p:nth-child(2){
+            width: 640px;
+            height: 61px;
+            margin: 0 auto 35px auto;
+            font-size: 18px;
             line-height: 30px;
-
-            a{
-                text-decoration: none;
-                color: $font-color;
-            }    
-
         }
-        li:nth-child(7){
-            font-size: 16px;
-            line-height: 18px;
-            padding: 17px 24px 19px 24px;
-            background: #FF4D01;
+
+        div.btn-group{
+            justify-content: center;
+        
+            button:nth-of-type(2){
+                color: $primary-font-color;
+            }
         }
     }
-} 
-
-.home-container{
-    width: 1196px;
-    height: 359px;
-    margin: 165px auto 344px auto;
-    text-align: center;
-
-    p:nth-child(1){
-        width: 660px;
-        height: 169px;
-        margin: 0 auto 20px auto;
-        font-size: 72px;
-        line-height: 84px;
-        color: #FFFFFF;
-    }
-
-    p:nth-child(2){
-        width: 640px;
-        height: 61px;
-        margin: 0 auto 35px auto;
-        font-size: 18px;
-        line-height: 30px;
-        color: #FFFFFF;
-    }
-
-    button{
-        color: #FFFFFF;
-    }
-
-    button:nth-of-type(2){
-        margin-left: 28px;
-    }
 }
 
-.chapter-name{
-    margin-bottom: 15px;
-    font-size: 20px;
-    line-height: 22px;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: #FF4D01;
-}
-
-.chapter-slogan{
-    margin-bottom: 19px;
-    font-size: 54px;
-    line-height: 62px;
-    color: #191919;
-} 
-
-.chapter-description{
-    font-size: 18px;
-    line-height: 30px;
-    color: #605E5D;
-}
-.btn-bg-transperent{
-    height: 75px;
-    font-size: 18px;
-    line-height: 20px;
-    padding: 27px 40px 28px 39px;
-    background: transparent;
-}
-
-.btn-bg-colored{
-    height: 75px;
-    padding: 25px 38px 30px 38px;
-    background: #FF4D01;
-    border: none;
-    color: #FFFFFF;
-}
-
-.black-border{
-    border: 2px solid #191919;
-}
-
-.white-border{
-    border: 2px solid #FFFFFF;
-}
-
+// About start
 .about{
-    width: 1440px;
+    width: 100%;
     height: 978px;
     padding: 144px 146px 299px 146px;
     display: flex;
     gap: 73px;
-}
 
-.about-statistic{
-    max-width: 596px;
-    height: 107px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 48px;
+    div.about-info{
+        width: 596px;
+        height: 649px;
+        padding-top: 39px;
     
-    div:nth-of-type(1){
-        width: 154px;
-    }
-
-    div:nth-of-type(2){
-        width: 109px;
-    }
-
-    div:nth-of-type(3){
-        width: 161px;
-    }
-
-    div.statistic-item{
-        text-align: center;
-
-        p:nth-of-type(1){
-            font-size: 72px;
-            line-height: 84px;
-            color: #191919;
-
-            span{
-                color: #FF4D01;
-            }
-        }
-
         p:nth-of-type(2){
-            width: 100%;
-            height: 20px;
+            width: 522px;
+            height: 186px;
+        }
+    
+        p:nth-of-type(3){
+            height: 121px;
+            margin-bottom: 56px;
             font-size: 18px;
-            line-height: 20px;
-            color: #989899;
-        }    
+            line-height: 30px;
+            color: #605E5D;
+        }
+    
+    }
+
+    div.about-statistic{
+        max-width: 596px;
+        height: 107px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 48px;
+        
+        div:nth-of-type(1){
+            width: 154px;
+        }
+    
+        div:nth-of-type(2){
+            width: 109px;
+        }
+    
+        div:nth-of-type(3){
+            width: 161px;
+        }
+    
+        div.statistic-item{
+            text-align: center;
+    
+            p:nth-of-type(1){
+                font-size: 72px;
+                line-height: 84px;
+                color: #191919;
+    
+                span{
+                    color: #FF4D01;
+                }
+            }
+    
+            p:nth-of-type(2){
+                width: 100%;
+                height: 20px;
+                font-size: 18px;
+                line-height: 20px;
+                color: #989899;
+            }    
+        }
     }
 }
 
-.about-info{
-    width: 596px;
-    height: 649px;
-    padding-top: 39px;
-
-    p:nth-of-type(2){
-        width: 522px;
-        height: 186px;
-    }
-
-    p:nth-of-type(3){
-        height: 121px;
-        margin-bottom: 56px;
-        font-size: 18px;
-        line-height: 30px;
-        color: #605E5D;
-    }
-
-}
-
-.project{
+// Services start
+#services{
     width: 1196px;
     height: 1204px;
     padding: 0 146px 299.77px 146px;
-}
-
-.btn-group{
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.heading-container{
-    width: 1148px;
-    height: 160px;
-    margin: 0 auto 64px auto;
-    display: flex;
-    
-    div:first-child{
-        width: 420px;   
-    }
-
-    div:last-child{
-        justify-content: flex-end;
-        flex: 1;
-    }
 }
 
 .service-container{
@@ -380,29 +316,30 @@ nav{
         }   
     }
 }
-
+// Get quote start
 #get-quote{
     width: 100%;
     height: 515px;
     background: url("/images/constraction.png") no-repeat;
     background-size: cover;
     padding: 116.23px 0 115.77px 146px;
-}
 
-.get-quote-conatainer{
-    width: 610.91px;
-    height: 313px;
-
-    p.chapter-slogan{
-        margin-bottom: 20px; 
-     }
+    div.get-quote-conatainer{
+        width: 610.91px;
+        height: 313px;
     
-    p.chapter-description{
-       margin-bottom: 35px; 
-    }
+        p.chapter-slogan{
+            margin-bottom: 20px; 
+         }
+        
+        p.chapter-description{
+           margin-bottom: 35px; 
+        }
+    } 
 }
 
-.bg-decoration-image{
+// Decoration bg-image
+div.bg-decoration-image{
     width: 876px;
     height: 440px;
     margin: 0 auto;
@@ -410,7 +347,7 @@ nav{
     opacity: 50%;
 }
 
-
+// Why choose us section start
 .why-choose-us-wrapper{
     width: 1196px;
     height: 1168px;
@@ -512,11 +449,11 @@ nav{
     }         
 }
 
-.our-projects{
+// Project section start
+#projects{
     width: 1440px;
     height: 1229.11px;
     padding-bottom: 240.34px;
-    border: 1px solid red;
 
     div.heading-container{
         margin: 0 auto 63.77px auto;
@@ -534,7 +471,8 @@ nav{
         display: flex;
         flex-direction: row;
         gap: 64px;
-        overflow-y: hidden;
+        overflow: hidden;
+       
         
         div{
             padding: 0;
@@ -611,24 +549,13 @@ nav{
     width: 168px;
     height: 72px;
     display: flex;
+    margin: 0 auto;
     justify-content: center;
-    text-align: center;
     gap: 24px;
 
     div{
         width: 72px;
         height: 72px;
-        line-height: 72px;
-        color: #FFFFFF;
-        
-        div{
-            width: 25px;
-            height: 26px;
-            font-size: 26px;
-            line-height: 26px;
-            display: inline-block;
-            vertical-align: middle;
-        }
     }
 
     div.pre{
@@ -645,15 +572,18 @@ nav{
     padding-left: 68px;
 }
 
-
+// Testimonials section start
 .testimonials{
     width: 1440px;
     height: 629.98px;
     margin-bottom: 220.02px;
-    border: 1px solid red;
 
     div.heading-container{
         margin-bottom: 108px;
+
+        div:nth-of-type(1){
+            width: 1000px;
+        }
 
         p.chapter-slogan{
             width: 530px;
@@ -662,25 +592,21 @@ nav{
         }
 
         div.navigation-btn{
-            width: 168px;
-            border: 1px solid blue;
+            align-self: center;
 
-            div.next{
-                width: 72px;
-                height: 72px;
-            }
-            div.pre{
+            div{
                 width: 72px;
                 height: 72px;
             }
         }
     }
     div.client-container{
-        width: 1480px;
+        width: 1440px;
         height: 318px;
         display: flex;
         gap: 108px;
         padding-left: 146px;
+        overflow: hidden;
 
         div.client{
             width: 740px;
@@ -751,6 +677,7 @@ nav{
       
 }
 
+// Blog section start
 #blog{
     width: 1196px;
     height: 899px;
@@ -874,6 +801,7 @@ nav{
     }
 }
 
+// Footer section start
 footer{
     width: 1440px;
     height: 651px;
@@ -1021,10 +949,12 @@ footer{
             }
         }
     }
+
     div.designedBy{
-        width: 1148px;
+        width: 100%;
         height: 30px;
         margin: 0 auto;
+        padding: 0 146px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1056,4 +986,127 @@ footer{
     line-height: 24px;
     color: #FFFFFF;
     margin-bottom: 38px;
+}
+
+.btn-group{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 28px;
+}
+
+.heading-container{
+    width: 1148px;
+    height: 160px;
+    margin: 0 auto 64px auto;
+    display: flex;
+    
+    div:first-child{
+        width: 500px;   
+    }
+
+    div:last-child{
+        justify-content: flex-end;
+        flex: 1;
+    }
+}
+
+.btn{
+    font-family: $font-stack;
+    font-size: $font-size;
+    height: 75px;
+    line-height: 20px;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.btn-bg-transperent{
+    padding: 27px 40px 28px 39px;
+    background: transparent;
+    transition: all 1s linear;
+
+    a{
+        color: $black-font-color;
+    }
+
+    &:hover{
+        cursor: pointer;
+        border: 2px solid #FF4D01;
+        background: $btn-bg-color;
+        border: none;
+        
+        a{
+            color: $primary-font-color;
+        }
+    }
+}
+
+.btn-bg-colored{
+    padding: 25px 38px 30px 38px;
+    background: $btn-bg-color;
+    border: none;
+    color: $primary-font-color;
+    transition: all 1s linear;
+
+    a{
+        color: $primary-font-color;
+    }
+
+    &:hover{
+        cursor: pointer;
+        border: 2px solid #000000;
+        background-color: transparent;
+
+        a{
+            color: $black-font-color;
+        }
+    }
+}
+
+.black-border{
+    border: 2px solid #191919;
+}
+
+.white-border{
+    border: 2px solid #FFFFFF;
+   
+    a{
+        color: $primary-font-color;
+    } 
+}
+
+.in-header{
+    &:hover{
+        border: 2px solid #FFFFFF; 
+
+       a{
+        color: $primary-font-color;
+       }
+    }
+}
+
+
+.chapter-name{
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: $chapter-name-color;
+}
+
+.chapter-slogan{
+    margin-bottom: 19px;
+    font-size: 54px;
+    line-height: 62px;
+    color: $chapter-slogan-color;
+} 
+
+.chapter-description{
+    font-size: 18px;
+    line-height: 30px;
+    color: $chapter-description-color;
 }
