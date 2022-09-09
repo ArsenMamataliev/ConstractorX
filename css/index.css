@@ -55,17 +55,24 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   color: #FFFFFF;
+  -webkit-transition: border 0.5s linear;
+  transition: border 0.5s linear;
 }
 
 header nav ul li a:hover {
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #FF4D01;
 }
 
-header nav ul li:nth-child(7) {
-  font-size: 16px;
-  line-height: 18px;
+header nav ul button {
+  width: 129px;
+  height: 54px;
   padding: 17px 24px 19px 24px;
   background: #FF4D01;
+}
+
+header nav ul button a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 header div.home-container {
@@ -728,12 +735,14 @@ div.bg-decoration-image {
 }
 
 #blog div.blog-container {
-  width: 1148px;
+  width: 100%;
   height: 736px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 24px;
+  margin: 0 auto;
+  padding-left: 24px;
 }
 
 #blog div.blog-container div.left-side {
@@ -765,6 +774,7 @@ div.bg-decoration-image {
 }
 
 #blog div.blog-container div.right-side {
+  width: 562px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1071,25 +1081,25 @@ footer div.designedBy p:nth-of-type(2) a {
   text-decoration: none;
 }
 
-.btn-bg-transperent {
+.btn-bg-transparent {
   padding: 27px 40px 28px 39px;
   background: transparent;
   -webkit-transition: all 1s linear;
   transition: all 1s linear;
 }
 
-.btn-bg-transperent a {
+.btn-bg-transparent a {
   color: #191919;
 }
 
-.btn-bg-transperent:hover {
+.btn-bg-transparent:hover {
   cursor: pointer;
   border: 2px solid #FF4D01;
   background: #FF4D01;
   border: none;
 }
 
-.btn-bg-transperent:hover a {
+.btn-bg-transparent:hover a {
   color: #FFFFFF;
 }
 
@@ -1130,6 +1140,7 @@ footer div.designedBy p:nth-of-type(2) a {
 
 .in-header:hover {
   border: 2px solid #FFFFFF;
+  background: transparent;
 }
 
 .in-header:hover a {
